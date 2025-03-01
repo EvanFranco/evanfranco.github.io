@@ -87,6 +87,22 @@
 										
 										</p>
 										<a href="#">https://github.com/EvanFranco/ImageDetection</a><br />
+										<section id="features">
+											<header class="style1">
+												<h2>Object Classes HackUconn</h2>
+												<p>Here are the object classes detected by the system:</p>
+												<button onclick="copyToClipboard()">Copy Class Names</button>
+												<textarea id="classNames" style="display:none;">classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "sofa", "pottedplant", "bed", "diningtable", "toilet", "tvmonitor", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]</textarea>
+											</header>
+										</section>
+									</p>
+									<section id="features">
+										<header class="style1">
+											<h2>Scroll some more to see some fun facts and get into contact with me!</h2>
+										</header>
+									</section>
+										</p>
+									</p>
 					<section id = "features">
 						<header class=" style1">
 							<h2> Scroll some more to seem some fun facts and get into contact with me!</h2>
@@ -217,6 +233,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			
 	</body>
+	<script>
+		function copyToClipboard() {
+			var copyText = document.getElementById("classNames");
+			copyText.style.display = "block";
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); // For mobile devices
+			document.execCommand("copy");
+			copyText.style.display = "none";
+			alert("Class names copied to clipboard!");
+		}
+		</script>
 </html>
