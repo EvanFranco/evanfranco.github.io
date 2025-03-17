@@ -1,249 +1,149 @@
-<!DOCTYPE HTML>
-<!--
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Evan Franco</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Franco</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">EF</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-			<!-- Header -->
-				<section id="header" class="wrapper">
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Evan Franco</h1>
+            <p class="subtitle">Computer Science Student @ UConn</p>
+            <p class="class-year">Class of 2026</p>
+        </div>
+    </header>
 
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="index.html">Evan Franco</a></h1>
-							<p>
-								Computer Science Student @ Uconn<br>
-								Class of 2026
-							</p>
-						</div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hey! I'm Evan, a passionate computer science student at UConn. I love creating new apps, going to the gym, and spending time with friends and family.</p>
+        </div>
+    </section>
 
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Research Assistant</h3>
+                    <p>Harvard University and University of Connecticut</p>
+                    <p class="experience-subtitle">
+                        <a href="https://ash.harvard.edu/programs/crowd-counting-consortium" class="club-link">
+                            Crowd Counting Consortium – Ash Center
+                        </a>
+                    </p>
+                    <p class="experience-date">August 2024 - Present</p>
+                </div>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-							</ul>
-						</nav>
+                <div class="experience-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Residential Assistant</h3>
+                    <p>University of Connecticut</p>
+                    <p class="experience-date">August 2024 - Present</p>
+                </div>
 
-				</section>
+                <div class="experience-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Husky Developers</h3>
+                    <p>President of UConn's Husky Developers Club</p>
+                    <p class="experience-date">May 2024 - Present</p>
+                    <a href="https://husky-developers.github.io/" class="club-link">Visit Club Website</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<!-- Intro -->
-				<section id="intro" class="wrapper style1">
-					<div class="title">Intro</div>
-					<div class="container">
-						<p class="style1">About Me!</p>
-						<p class="style2">
-							Hey I'm Evan scroll down to see some of my projects or about myself😊!</br class="mobile-hide" />
-						</p>
-						<p class="style3">Some of my hobbies include going to the creating new apps, going to the gym and relaxing with friends or family</p>
-						<ul class="actions">
-						</ul>
-					</div>
-				</section>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/PacmanImageUnity.png" alt="Pacman Project">
+                    <h3>Pacman Reinforcement Learning</h3>
+                    <p>Recreated Pacman in Unity Game engine using C# scripts. Implemented Ghost AI with graph algorithms and modified Unity's ML model for reinforcement learning.</p>
+                    <a href="https://github.com/EvanFranco/PacmanProject" class="project-link">View Project</a>
+                </div>
 
-			<!-- Main -->
-				<section id="main" class="wrapper style2">
-					<div class="title">Projects</div>
-					<div class="container">
+                <div class="project-card">
+                    <img src="images/Me and Objects.png" alt="Object Classification System">
+                    <h3>Real-Time Object Classification System</h3>
+                    <p>A machine learning system that detects and classifies objects from live camera feed, providing real-time feedback with bounding boxes and confidence scores.</p>
+                    <a href="https://github.com/EvanFranco/ImageDetection" class="project-link">View Project</a>
+                </div>
 
-						<section id="features">
-							<header class="style1">
-								
-										<!-- Image -->
-							<img src="images/PacmanImageUnity.png"
-								width="500"
-								height="500"/>
-						</a>
-						<!-- Features -->
-							<section id="features">
-								<header class="style1">
-									<h2>Pacman Reinforcement Learning</h2>
-									<p>Recreated Pacman in Unity Game engine using game scripts written in C# in conjunction with game objects. <br>
-										Created Ghost AI by creating a graph algorithm where the Ghost’s behavior changes based on their interactions with nodes and time passed on the board. <br>
-										Creating a Reinforcement model by modifying the Unity’s ML model. Modifying the built-in fitness function to better suit the parameters surrounding the environment. <br>
-					</p>
-								<a href="#">https://github.com/EvanFranco/PacmanProject</a><br />
-											<!-- Image -->
-								<img src="images/Me and Objects.png"
-									width="500"
-									height="500"/>
-							</a>
+                <div class="project-card">
+                    <img src="images/laundry-app.png" alt="UConn Laundry App">
+                    <h3>UConn Laundry App</h3>
+                    <p>A mobile application helping UConn students track laundry machine availability in real-time. Built with React Native and Firebase.</p>
+                    <a href="https://github.com/LaundryConn" class="project-link">View Project</a>
+                </div>
 
-						<!-- Features -->
-							<section id="features">
-								<header class="style1">
-									<h2>Real-Time Object Classification System</h2>
-									<p> A machine learning system that detects and classifies objects from a live camera feed, providing real-time feedback
-										Extracts bounding boxes, object labels, and confidence scores for detected objects, then rendered onto the camera.
-										
-										</p>
-										<a href="#">https://github.com/EvanFranco/ImageDetection</a><br />
-										<section id="features">
-											<header class="style1">
-												<h2>Object Classes HackUconn</h2>
-												<p>Here are the object classes detected by the system:</p>
-												<button onclick="copyToClipboard()">Copy Class Names</button>
-												<textarea id="classNames" style="display:none;">classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "sofa", "pottedplant", "bed", "diningtable", "toilet", "tvmonitor", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]</textarea>
-											</header>
-										</section>
-									</p>
-									<section id="features">
-										<header class="style1">
-											<h2>Scroll some more to see some fun facts and get into contact with me!</h2>
-										</header>
-									</section>
-										</p>
-									</p>
-					<section id = "features">
-						<header class=" style1">
-							<h2> Scroll some more to seem some fun facts and get into contact with me!</h2>
-						</header>
-					</section>
-								</header>
-								<div class="feature-list">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon fa-comment">Residential Assistant</h3>
-									
-											
-												<p> 
-												I am also a Residential Assitant for the University of Connecticut
-								
-													</p>
-											
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 i class="fa fa-building"> Husky Developers</h3> 
-												<p>I am president for UConn's Husky Developers <br>
-												Heres our Club Website:
-												<a href="#">https://husky-developers.github.io/</a><br />
-												</p>
-											</section>
-										</div>
-									<!--
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon fa-image">Pretium phasellus justo lorem</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-cog">Tempus sed pretium orci</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-wrench">Aliquam consequat et feugiat</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="icon solid fa-check">Dolore laoreet aliquam mattis</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
+                <div class="project-card">
+                    <img src="images/war-peace.png" alt="War and Peace Memorial WebApp">
+                    <h3>War and Peace Memorial WebApp</h3>
+                    <p>An interactive web application commemorating historical events, featuring an immersive timeline and detailed historical information.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
 
+                <div class="project-card">
+                    <img src="images/imdb-sorter.png" alt="IMDB Review Sorter">
+                    <h3>IMDB Review Sorter</h3>
+                    <p>A machine learning tool that analyzes and categorizes IMDB reviews, helping users quickly find relevant feedback about movies.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					</div>
-				</section>
--->
-	
-								<!-- Contact -->
-									<section class="feature-list small">
-										<div class="row">
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-home">Based</h3>
-													<p>
-														Valley Stream, New York/<br>
-														Storrs, Connecticut
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-comment">Social</h3>
-													<p>
-														<a href="#">linkedin.com/evanfranco</a><br />
-														<a href="#">https://github.com/EvanFranco</a>
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<qsection>
-													<h3 class="icon solid fa-envelope">Email</h3>
-													<p>
-														<a href="#">evan.franco@uconn.edu</a>
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small" style="display: flex; gap: 10px;">
-												<section>
-													<a href="assets/resume/Resume.pdf" target="_blank" rel="noopener noreferrer">
-														<button>
-															Download SWE/SDE Resume <br>
-															Last Updated: 1/26/2025
-														</button>
-													</a>
-												</section>
-												<section>
-													<a href="assets/resume/MLResume.pdf" target="_blank" rel="noopener noreferrer">
-														<button>
-															Machine Learning resume <br>
-															Last Updated: 1/26/2025
-														</button>
-													</a>
-												</section>
-											</div>
-											
-											</div>
-										</div>
-									</section>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Valley Stream, New York / Storrs, Connecticut</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:evan.franco@uconn.edu">evan.franco@uconn.edu</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/evanfranco" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/EvanFranco" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="resume-buttons">
+                    <a href="assets/resume/Resume.pdf" class="resume-btn" target="_blank">
+                        <i class="fas fa-file-alt"></i>
+                        Download SWE/SDE Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-							</div>
-						</div>
-						<div id="copyright">
-							<ul>
-								<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</div>
-				</section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Evan Franco. All rights reserved.</p>
+        </div>
+    </footer>
 
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-	</body>
-	<script>
-		function copyToClipboard() {
-			var copyText = document.getElementById("classNames");
-			copyText.style.display = "block";
-			copyText.select();
-			copyText.setSelectionRange(0, 99999); // For mobile devices
-			document.execCommand("copy");
-			copyText.style.display = "none";
-			alert("Class names copied to clipboard!");
-		}
-		</script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
