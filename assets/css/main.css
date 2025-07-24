@@ -141,7 +141,9 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--light-gray);
+    background: url('../../images/one_piece_banner.png') center center;
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
 }
@@ -153,7 +155,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(44, 62, 80, 0.1));
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.7), rgba(44, 62, 80, 0.7));
     z-index: 1;
 }
 
@@ -166,19 +168,26 @@ p {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--white);
     margin-bottom: 0.5rem;
     font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .class-year {
     font-size: 1.2rem;
-    color: var(--text-color);
-    opacity: 0.8;
+    color: var(--white);
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* Sections */
@@ -281,20 +290,24 @@ p {
 /* Experience Grid */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
     margin-top: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .experience-card {
     background: var(--white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    min-width: 200px;
+    flex-shrink: 0;
 }
 
 .experience-card::before {
@@ -493,4 +506,149 @@ footer {
     font-size: 0.85rem;
     margin-top: 0.5rem;
     font-style: italic;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.company-card {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: var(--transition);
+    width: 100%;
+    max-width: none;
+}
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.company-header:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.company-details {
+    flex: 1;
+}
+
+.company-details h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.company-details p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.company-date {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.company-header i {
+    color: var(--secondary-color);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.company-header.active i {
+    transform: rotate(180deg);
+}
+
+.experience-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.experience-content.active {
+    max-height: 500px;
+    padding: 2rem;
+    border-top: 1px solid var(--light-gray);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.company-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.company-link:hover {
+    color: var(--primary-color);
+}
+
+/* Role Styles */
+.role-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.role-item {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.role-content h4 {
+    color: var(--primary-color);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.role-date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+}
+
+.role-content p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+
+.role-content .company-link {
+    margin-top: 1rem;
 }

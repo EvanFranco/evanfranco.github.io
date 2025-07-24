@@ -4,6 +4,22 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Experience dropdown functionality - defined globally
+window.toggleExperience = function(id) {
+	console.log('toggleExperience called with id:', id);
+	const content = document.getElementById(id);
+	const header = content.previousElementSibling;
+	
+	if (content && header) {
+		// Toggle the active class
+		content.classList.toggle('active');
+		header.classList.toggle('active');
+		console.log('Classes toggled successfully');
+	} else {
+		console.error('Could not find content or header elements');
+	}
+};
+
 (function($) {
 
 	var	$window = $(window),
@@ -110,4 +126,4 @@
 		observer.observe(card);
 	});
 
-})(jQuery);
+})

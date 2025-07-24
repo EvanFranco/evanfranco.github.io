@@ -31,40 +31,138 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hey! I'm Evan, a passionate computer science student at UConn. I love creating new apps, going to the gym, and spending time with friends and family.</p>
+            <p>Hey! I'm Evan, a computer science student at UConn. I love creating new apps, going to the gym, and spending time with friends and family. I also like one piece!</p>
         </div>
     </section>
 
     <section id="experience" class="section">
         <div class="container">
             <h2>Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>Research Assistant</h3>
-                    <p>Harvard University and University of Connecticut</p>
-                    <p class="experience-subtitle">
-                        <a href="https://ash.harvard.edu/programs/crowd-counting-consortium" class="club-link">
-                            Crowd Counting Consortium – Ash Center
-                        </a>
-                    </p>
-                    <p class="experience-date">August 2024 - Present</p>
+            <div class="experience-list">
+                <div class="company-card">
+                    <div class="company-header" onclick="toggleExperience('harvard')">
+                        <div class="company-info">
+                            <img src="images/harvard-logo.png" alt="Harvard" class="company-logo">
+                            <div class="company-details">
+                                <h3>Harvard University & University of Connecticut</h3>
+                                <p class="company-date">March 2025 - Present</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="experience-content" id="harvard">
+                        <div class="role-timeline">
+                            <div class="role-item">
+                                <h4>Research Assistant</h4>
+                                <p class="role-date">March 2025 - Present</p>
+                                <p>Creating research tools for the Crowd Counting Consortium at the Ash Center for Democratic Governance and Innovation. This is a joint project where I create tools using Python to support the counting of protests across the United States. Tracking protests like No Kings and various other protests across the country. I have contributed to the project by creating tools that allow for the tracking of protests across the country with over 3000+ unique data points and have been credited in the database.</p>
+                                <a href="https://ash.harvard.edu/programs/crowd-counting-consortium" class="company-link">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-card">
+                    <div class="company-header" onclick="toggleExperience('werth')">
+                        <div class="company-info">
+                            <img src="images/uconn_werth_institute_logo.jpg" alt="Werth Institute" class="company-logo">
+                            <div class="company-details">
+                                <h3>Werth Institute for Entrepreneurship and Innovation</h3>
+                                <p class="company-date">May 2025 - Present</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="experience-content" id="werth">
+                        <div class="role-timeline">
+                            <div class="role-item">
+                                <h4>Web Developer Intern</h4>
+                                <p class="role-date">May 2025 - Present</p>
+                                <p>Modified and extended theme logic using PHP, HTML, and WordPress templating themes and templates. Implementation of custom post types and structured content using WordPress REST API. Integrated client-side form validation and secure data submission using custom JavaScript and WordPress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-card">
+                    <div class="company-header" onclick="toggleExperience('voya')">
+                        <div class="company-info">
+                            <img src="images/voya-logo.jpg" alt="Voya Financial" class="company-logo">
+                            <div class="company-details">
+                                <h3>Voya Financial</h3>
+                                <p class="company-date">June 2025 - August 2025</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="experience-content" id="voya">
+                        <div class="role-timeline">
+                            <div class="role-item">
+                                <h4>IT + Project Management Intern</h4>
+                                <p class="role-date">June 2025 - August 2025</p>
+                                <p>Assisted in migration of 2000+ employees from OneAmerica to Voya involving API, product, and revenue projects. Utilized IBM Engineering Management to map objectives in projects that generated over $33 million in revenue. Calculated cost to project value and saved $5,000 in production by cutting unneeded services using Plainview. Utilized Agile and waterfall methodologies to map out a project's Procurement, SDIP, and ARA/AFD.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="experience-card">
-                    <i class="fas fa-user-graduate"></i>
-                    <h3>Residential Assistant</h3>
-                    <p>University of Connecticut</p>
-                    <p class="experience-date">August 2024 - Present</p>
+                <div class="company-card">
+                    <div class="company-header" onclick="toggleExperience('husky')">
+                        <div class="company-info">
+                            <img src="images/husky-dev.png" alt="Husky Developers" class="company-logo">
+                            <div class="company-details">
+                                <h3>Husky Developers Club</h3>
+                                <p class="company-date">May 2024 - Present</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="experience-content" id="husky">
+                        <div class="role-timeline">
+                            <div class="role-item">
+                                <h4>President - Lead Developer</h4>
+                                <p class="role-date">May 2024 - Present</p>
+                                <p>Leading UConn's top software development club, organizing events and workshops and leading over 30+ developers.</p>
+                                <a href="https://husky-developers.github.io/" class="company-link" target="_blank">Visit Club Website</a>
+                            </div>
+                            <div class="role-item">
+                                <h4>Member - Software Developer </h4>
+                                <p class="role-date">Jan 2024 - May 2024</p>
+                                <p>Worked on projests with the club. Worked with Engineers from various</p>
+                                <a href="https://husky-developers.github.io/" class="company-link" target="_blank">Visit Club Website</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="experience-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Husky Developers</h3>
-                    <p>President of UConn's Husky Developers Club</p>
-                    <p class="experience-date">May 2024 - Present</p>
-                    <a href="https://husky-developers.github.io/" class="club-link" target="_blank">Visit Club Website</a>
+                <div class="company-card">
+                    <div class="company-header" onclick="toggleExperience('uconn')">
+                        <div class="company-info">
+                            <img src="images/uconn-seal.jpg" alt="UConn" class="company-logo">
+                            <div class="company-details">
+                                <h3>University of Connecticut Residential Life</h3>
+                                <p class="company-date">August 2024 - Present</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="experience-content" id="uconn">
+                        <div class="role-timeline">
+                            <div class="role-item">
+                                <h4>Senoir Residential Assitant</h4>
+                                <p class="role-date">May 2025 - Present</p>
+                                <p>Work with HD and RA's to ensure saftey and productivity of community</p>
+                            </div>
+                            <div class="role-item">
+                                <h4>Residential Assistant</h4>
+                                <p class="role-date">August 2024 - May 2025</p>
+                                <p>Helped First Year Students transition to college life and helped them adjust to the college environment.</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                            
+
             </div>
         </div>
     </section>
@@ -74,10 +172,17 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
+                    <img src="images/Prediction_NYC.png" alt="NYPD Crime Prediction Model">
+                    <h3>NYPD Crime Prediction Model | Team Project</h3>
+                    <p>Built Machine Learning model with 88% accuracy to classify 50,000+ NYC crime records across all 5 boroughs. Created folium-based visualization with real-time heatmaps for 15+ crime types, cutting analysis time by 40%.</p>
+                    <a href="https://github.com/EvanFranco/NYC_Crime_Prediction_Model/tree/main/CSE3000" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
                     <img src="images/pokemon-guess.png" alt="Guess that Pokemon">
                     <h3>Guess that Pokemon</h3>
                     <p>A web-based game that challenges users to identify Pokemon from their picture, built using React and the PokeAPI. <p></p>
-                    <a href="https://github.com/EvanFranco/pokemon-guess" class="project-link">View Project</a>
+                    <a href="https://github.com/EvanFranco/Guess-That-Pokemon" class="project-link">View Project</a>
                 </div>
 
                 <div class="project-card">
@@ -132,7 +237,7 @@
                         <a href="mailto:evan.franco@uconn.edu">evan.franco@uconn.edu</a>
                     </div>
                     <div class="social-links">
-                        <a href="https://linkedin.com/evanfranco" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/evanfranco/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/EvanFranco" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
