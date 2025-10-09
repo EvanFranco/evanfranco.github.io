@@ -126,4 +126,120 @@ window.toggleExperience = function(id) {
 		observer.observe(card);
 	});
 
+
 })
+
+// Terminal typing animation - outside jQuery wrapper
+function typeWriter() {
+	const textElement = document.getElementById('typing-text');
+	const cursorElement = document.getElementById('cursor');
+	
+	console.log('TypeWriter function called');
+	console.log('Text element:', textElement);
+	console.log('Cursor element:', cursorElement);
+	
+	if (!textElement || !cursorElement) {
+		console.log('Elements not found, retrying in 500ms');
+		setTimeout(typeWriter, 500);
+		return;
+	}
+	
+	const texts = [
+		'python3 portfolio.py',
+		'',
+		'# Portfolio Information',
+		'name = "Evan Franco"',
+		'major = "Computer Science"',
+		'university = "University of Connecticut"',
+		'class_year = 2026'
+	];
+	
+	let textIndex = 0;
+	let charIndex = 0;
+	let isDeleting = false;
+	
+	function type() {
+		const currentText = texts[textIndex];
+		
+		// Handle empty strings (new lines)
+		if (currentText === '') {
+			textElement.innerHTML += '<br>';
+			textIndex++;
+			if (textIndex >= texts.length) {
+				textIndex = 0; // Loop back to start
+				textElement.innerHTML = ''; // Clear for restart
+			}
+			setTimeout(type, 300);
+			return;
+		}
+		
+		if (isDeleting) {
+			// Remove the last character
+			let currentHTML = textElement.innerHTML;
+			textElement.innerHTML = currentHTML.slice(0, -1);
+			charIndex--;
+		} else {
+			// Add the next character with proper formatting
+			let char = currentText.charAt(charIndex);
+			
+			// Apply syntax highlighting based on the current line
+			let coloredChar = char;
+			if (currentText.startsWith('#')) {
+				coloredChar = '<span style="color: #888;">' + char + '</span>';
+			} else if (currentText.startsWith('print(')) {
+				coloredChar = '<span style="color: #4CAF50;">' + char + '</span>';
+			} else if (currentText.includes('=')) {
+				coloredChar = '<span style="color: #2196F3;">' + char + '</span>';
+			} else if (currentText.startsWith('python3')) {
+				coloredChar = '<span style="color: #FF9800;">' + char + '</span>';
+			} else if (currentText.startsWith('Name:') || currentText.startsWith('Major:') || 
+					   currentText.startsWith('University:') || currentText.startsWith('Class:') || 
+					   currentText.startsWith('Welcome')) {
+				coloredChar = '<span style="color: #E91E63;">' + char + '</span>';
+			}
+			
+			textElement.innerHTML += coloredChar;
+			charIndex++;
+		}
+		
+		let typeSpeed = isDeleting ? 20 : 50;
+		
+		if (!isDeleting && charIndex === currentText.length) {
+			typeSpeed = 1500; // Pause at end
+			isDeleting = true;
+		} else if (isDeleting && charIndex === 0) {
+			isDeleting = false;
+			textIndex++;
+			if (textIndex >= texts.length) {
+				// Add your information and stop the animation
+				setTimeout(() => {
+					textElement.innerHTML += '<br><br>';
+					textElement.innerHTML += '<span style="color: #E91E63;">Name: Evan Franco</span><br>';
+					textElement.innerHTML += '<span style="color: #E91E63;">Major: Computer Science</span><br>';
+					textElement.innerHTML += '<span style="color: #E91E63;">University: University of Connecticut</span><br>';
+					textElement.innerHTML += '<span style="color: #E91E63;">Class: 2026</span><br>';
+					textElement.innerHTML += '<span style="color: #E91E63;">Welcome to my portfolio!</span>';
+				}, 1000);
+				return;
+			} else {
+				// Add a line break after each line (except for empty strings)
+				if (texts[textIndex] !== '') {
+					textElement.innerHTML += '<br>';
+				}
+			}
+			typeSpeed = 300; // Pause before next text
+		}
+		
+		setTimeout(type, typeSpeed);
+	}
+	
+	
+	// Start typing after a short delay
+	setTimeout(type, 1000);
+}
+
+// Start the typing animation when page loads
+document.addEventListener('DOMContentLoaded', function() {
+	console.log('DOM loaded, starting typewriter');
+	typeWriter();
+});
