@@ -202,10 +202,10 @@ function typeWriter() {
 			charIndex++;
 		}
 		
-		let typeSpeed = isDeleting ? 20 : 50;
+		let typeSpeed = isDeleting ? 10 : 25;
 		
 		if (!isDeleting && charIndex === currentText.length) {
-			typeSpeed = 1500; // Pause at end
+			typeSpeed = 800; // Pause at end
 			isDeleting = true;
 		} else if (isDeleting && charIndex === 0) {
 			isDeleting = false;
@@ -219,7 +219,7 @@ function typeWriter() {
 					textElement.innerHTML += '<span style="color: #E91E63;">University: University of Connecticut</span><br>';
 					textElement.innerHTML += '<span style="color: #E91E63;">Class: 2026</span><br>';
 					textElement.innerHTML += '<span style="color: #E91E63;">Welcome to my portfolio!</span>';
-				}, 1000);
+				}, 500);
 				return;
 			} else {
 				// Add a line break after each line (except for empty strings)
@@ -227,7 +227,7 @@ function typeWriter() {
 					textElement.innerHTML += '<br>';
 				}
 			}
-			typeSpeed = 300; // Pause before next text
+			typeSpeed = 150; // Pause before next text
 		}
 		
 		setTimeout(type, typeSpeed);
