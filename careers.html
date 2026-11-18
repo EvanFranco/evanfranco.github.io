@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Careers | Evan Franco">
+    <title>Careers | Evan Franco</title>
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="stylesheet" href="assets/css/careers.css">
+    <script src="assets/js/careers.js" defer></script>
+</head>
+<body>
+    <header class="masthead" id="top">
+        <div class="page header-inner">
+            <a class="wordmark" href="index.html">Evan Franco</a>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="careers.html" aria-current="page">Careers</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page interior">
+        <section id="careers" aria-labelledby="careers-title">
+            <div class="career-heading">
+                <h1 id="careers-title">Evan Franco</h1>
+                <p class="career-companies">Previously at <a href="#sp-global">S&amp;P Global</a>, <a href="#travelers">Travelers</a>, <a href="#werth">Werth Institute</a>, <a href="#research">Harvard Kennedy School &amp; UConn</a>, <a href="#voya">Voya Financial</a>.</p>
+            </div>
+            <h2>Career timeline</h2>
+            <p class="section-note">Below is a timeline. Feel free to see what I was doing during these days!</p>
+            <div class="career-chart" hidden>
+                <div class="chart-controls">
+                    <label for="career-date">Explore by date</label>
+                    <output id="career-date-label" for="career-date"></output>
+                    <button type="button" id="career-today">Jump to today</button>
+                </div>
+                <div class="chart-scale">
+                    <input id="career-date" type="range" min="0" value="0" step="1">
+                    <div class="chart-years" aria-hidden="true"></div>
+                </div>
+                <div class="chart-tracks"></div>
+                <div class="snapshot-actions">
+                    <button type="button" id="career-lucky">I&rsquo;m Feeling Lucky</button>
+                </div>
+                <div id="career-snapshot" aria-live="polite">
+                    <h3 id="snapshot-title"></h3>
+                    <p id="snapshot-text"></p>
+                    <ul id="snapshot-items"></ul>
+                </div>
+            </div>
+            <h2 class="career-details-title">Experience details</h2>
+            <div class="gallery-toolbar">
+                <p class="section-note">Swipe or use the buttons to browse.</p>
+                <div class="gallery-buttons" hidden>
+                    <button type="button" id="gallery-prev" aria-controls="experience-gallery" aria-label="Previous experience">&larr; Previous</button>
+                    <span id="gallery-position" aria-live="polite"></span>
+                    <button type="button" id="gallery-next" aria-controls="experience-gallery" aria-label="Next experience">Next &rarr;</button>
+                </div>
+            </div>
+            <div id="experience-gallery" class="experience-gallery" role="region" aria-label="Experience gallery" tabindex="0">
+                <div class="gallery-frame">
+                    <details id="uconn" data-start="2022-08-01" data-label="UConn" data-end="2026-06-01" open>
+                        <summary>
+                            <span class="role-date">Aug. 2022 &ndash; May 2026</span>
+                            <strong>Computer Science at UConn</strong>
+                            <span class="organization">University of Connecticut</span>
+                        </summary>
+                        <div class="entry-body">
+                            <span class="organization-mark" aria-hidden="true"><span>UC</span><img src="images/uconn-seal.jpg" alt="" width="34" height="34" hidden></span>
+                            <div>
+                                <p>I studied computer science at UConn from August 2022 through May 2026. The first stretch was about learning the fundamentals before internships and research joined the calendar.</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="gallery-frame">
+                    <details id="research" data-start="2025-03-01" data-label="Harvard / UConn" data-end="2026-06-01" open>
+                        <summary>
+                            <span class="role-date">Mar. 2025 &ndash; May 2026</span>
+                            <strong>Undergraduate Research Assistant</strong>
+                            <span class="organization">Harvard Kennedy School &amp; University of Connecticut &ndash; Crowd Counting Consortium</span>
+                        </summary>
+                        <div class="entry-body">
+                            <span class="organization-mark" aria-hidden="true"><span>H</span><img src="images/harvard-logo.png" alt="" width="34" height="34" hidden></span>
+                            <div>
+                                <p class="role-location">Remote</p>
+                                <p>I built a shared Python framework for 25+ scrapers tracking protests across the U.S. I also turned 500+ records per run into clean, deduplicated spreadsheets, cutting manual processing effort in half.</p>
+                                <a href="https://ash.harvard.edu/programs/crowd-counting-consortium">Crowd Counting Consortium &rarr;</a>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="gallery-frame">
+                    <details id="voya" data-start="2025-06-01" data-label="Voya Financial" data-end="2025-09-01" open>
+                        <summary>
+                            <span class="role-date">June 2025 &ndash; Aug. 2025</span>
+                            <strong>Information Technology &amp; Project Management Intern</strong>
+                            <span class="organization">Voya Financial</span>
+                        </summary>
+                        <div class="entry-body">
+                            <span class="organization-mark" aria-hidden="true"><span>V</span><img src="images/voya-logo.jpg" alt="" width="34" height="34" hidden></span>
+                            <div>
+                                <p class="role-location">New York, NY</p>
+                                <p>I helped move finance reporting to a new REST API, checking data across 15+ endpoints. Then I automated the Excel reports so the team could spend less time assembling spreadsheets.</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="gallery-frame">
+                    <details id="travelers" data-start="2025-08-01" data-label="Travelers" data-end="2026-06-01" open>
+                        <summary>
+                            <span class="role-date">Aug. 2025 &ndash; May 2026</span>
+                            <strong>Student Software Engineer, Senior Design Project</strong>
+                            <span class="organization">Travelers</span>
+                        </summary>
+                        <div class="entry-body">
+                            <span class="organization-mark" aria-hidden="true"><span>T</span></span>
+                            <div>
+                                <p class="role-location">Remote</p>
+                                <p>I owned the full stack on a four-person senior design team, going from Figma sketches to a working React and .NET app. The app mapped provider locations and let users edit and query MongoDB data across more than a million records.</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="gallery-frame">
+                    <details id="werth" data-start="2025-09-01" data-label="Werth Institute" data-end="2026-06-01" open>
+                        <summary>
+                            <span class="role-date">Sep. 2025 &ndash; May 2026</span>
+                            <strong>Frontend Web Developer</strong>
+                            <span class="organization">Werth Institute for Entrepreneurship and Innovation</span>
+                        </summary>
+                        <div class="entry-body">
+                            <span class="organization-mark" aria-hidden="true"><span>W</span><img src="images/uconn_werth_institute_logo.jpg" alt="" width="34" height="34" hidden></span>
+                            <div>
+                                <p class="role-location">Storrs, CT</p>
+                                <p>I fixed accessibility issues across 80% of the institute&rsquo;s pages and documented how to keep them accessible. I built 10+ reusable components, and the site saw a 20% drop in bounce rate.</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="gallery-frame">
+                    <details id="sp-global" data-start="2026-06-01" data-label="S&amp;P Global" data-end="2026-09-01" open>
+                        <summary>
+                            <span class="role-date">June 2026 &ndash; Aug. 2026</span>
+                            <strong>Software Engineer Intern</strong>
+                            <span class="organization">S&amp;P Global</span>
+                        </summary>
+                        <div class="entry-body">
+                            <span class="organization-mark" aria-hidden="true"><span>S&amp;P</span></span>
+                            <div>
+                                <p class="role-location">Manhattan, NY</p>
+                                <p>I built a Python map app that turned plain-English questions into Databricks queries and map layers. I also cleaned and modeled energy data from 10+ source tables, cutting data-model development time by 20%.</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page"><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>

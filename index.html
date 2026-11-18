@@ -2,285 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The portfolio of Evan Franco.">
     <title>Evan Franco</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <script src="assets/js/portfolio.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#" class="logo">EF</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content">
-            <div class="terminal">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="btn close"></span>
-                        <span class="btn minimize"></span>
-                        <span class="btn maximize"></span>
-                    </div>
-                    <div class="terminal-title">Terminal - Portfolio</div>
-                </div>
-                <div class="terminal-body">
-                    <div class="code-line">
-                        <span class="prompt">$</span>
-                        <span class="command" id="typing-text"></span>
-                        <span class="cursor" id="cursor">|</span>
-                    </div>
-                </div>
-            </div>
+    <header class="masthead" id="top">
+        <div class="page header-inner">
+            <a class="wordmark" href="index.html">Evan Franco</a>
+            <nav aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="careers.html">Careers</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <div class="about-content">
-                <div class="luffy-inspiration">
-                    <div class="inspiration-box">
-                        <h3>Luffy Inspiration!</h3>
-                        <img src="images/luffy_insperation.jpg" alt="Luffy Inspiration" class="luffy-image">
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>Hey! I'm Evan, a computer science student at UConn. I love creating new apps, going to the gym, and spending time with friends and family. I also like one piece!</p>
-                </div>
+    <main class="page home">
+        <div class="intro">
+            <div>
+                <h1>Evan Franco</h1>
+                <p>Computer science at the University of Connecticut</p>
+            </div>
+            <div class="clock" hidden>
+                <time id="clock-time"></time>
+                <time id="clock-date"></time>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-list">
-                <div class="company-card">
-                    <div class="company-header" onclick="toggleExperience('harvard')">
-                        <div class="company-info">
-                            <img src="images/harvard-logo.png" alt="Harvard" class="company-logo">
-                            <div class="company-details">
-                                <h3>Harvard University & University of Connecticut</h3>
-                                <p class="company-date">March 2025 - Present</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="experience-content" id="harvard">
-                        <div class="role-timeline">
-                            <div class="role-item">
-                                <h4>Research Assistant</h4>
-                                <p class="role-date">March 2025 - Present</p>
-                                <p>Creating research tools for the Crowd Counting Consortium at the Ash Center for Democratic Governance and Innovation. This is a joint project where I create tools using Python to support the counting of protests across the United States. Tracking protests like No Kings and various other protests across the country. I have contributed to the project by creating tools that allow for the tracking of protests across the country with over 3000+ unique data points and have been credited in the database.</p>
-                                <a href="https://ash.harvard.edu/programs/crowd-counting-consortium" class="company-link">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-header" onclick="toggleExperience('werth')">
-                        <div class="company-info">
-                            <img src="images/uconn_werth_institute_logo.jpg" alt="Werth Institute" class="company-logo">
-                            <div class="company-details">
-                                <h3>Werth Institute for Entrepreneurship and Innovation</h3>
-                                <p class="company-date">May 2025 - Present</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="experience-content" id="werth">
-                        <div class="role-timeline">
-                            <div class="role-item">
-                                <h4>Web Developer Intern</h4>
-                                <p class="role-date">May 2025 - Present</p>
-                                <p>Modified and extended theme logic using PHP, HTML, and WordPress templating themes and templates. Implementation of custom post types and structured content using WordPress REST API. Integrated client-side form validation and secure data submission using custom JavaScript and WordPress.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-header" onclick="toggleExperience('voya')">
-                        <div class="company-info">
-                            <img src="images/voya-logo.jpg" alt="Voya Financial" class="company-logo">
-                            <div class="company-details">
-                                <h3>Voya Financial</h3>
-                                <p class="company-date">June 2025 - August 2025</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="experience-content" id="voya">
-                        <div class="role-timeline">
-                            <div class="role-item">
-                                <h4>IT + Project Management Intern</h4>
-                                <p class="role-date">June 2025 - August 2025</p>
-                                <p>Assisted in migration of 2000+ employees from OneAmerica to Voya involving API, product, and revenue projects. Utilized IBM Engineering Management to map objectives in projects that generated over $33 million in revenue. Calculated cost to project value and saved $5,000 in production by cutting unneeded services using Plainview. Utilized Agile and waterfall methodologies to map out a project's Procurement, SDIP, and ARA/AFD.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="company-card">
-                    <div class="company-header" onclick="toggleExperience('husky')">
-                        <div class="company-info">
-                            <img src="images/husky-dev.png" alt="Husky Developers" class="company-logo">
-                            <div class="company-details">
-                                <h3>Husky Developers Club</h3>
-                                <p class="company-date">May 2024 - Present</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="experience-content" id="husky">
-                        <div class="role-timeline">
-                            <div class="role-item">
-                                <h4>President - Lead Developer</h4>
-                                <p class="role-date">May 2024 - Present</p>
-                                <p>Leading UConn's top software development club, organizing events and workshops and leading over 30+ developers.</p>
-                                <a href="https://husky-developers.github.io/" class="company-link" target="_blank">Visit Club Website</a>
-                            </div>
-                            <div class="role-item">
-                                <h4>Member - Software Developer </h4>
-                                <p class="role-date">Jan 2024 - May 2024</p>
-                                <p>Worked on projests with the club. Worked with Engineers from various</p>
-                                <a href="https://husky-developers.github.io/" class="company-link" target="_blank">Visit Club Website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="company-card">
-                    <div class="company-header" onclick="toggleExperience('uconn')">
-                        <div class="company-info">
-                            <img src="images/uconn-seal.jpg" alt="UConn" class="company-logo">
-                            <div class="company-details">
-                                <h3>University of Connecticut Residential Life</h3>
-                                <p class="company-date">August 2024 - Present</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="experience-content" id="uconn">
-                        <div class="role-timeline">
-                            <div class="role-item">
-                                <h4>Senoir Residential Assitant</h4>
-                                <p class="role-date">May 2025 - Present</p>
-                                <p>Work with HD and RA's to ensure saftey and productivity of community</p>
-                            </div>
-                            <div class="role-item">
-                                <h4>Residential Assistant</h4>
-                                <p class="role-date">August 2024 - May 2025</p>
-                                <p>Helped First Year Students transition to college life and helped them adjust to the college environment.</p>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                            
-
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="images/Prediction_NYC.png" alt="NYPD Crime Prediction Model">
-                    <h3>NYPD Crime Prediction Model | Team Project</h3>
-                    <p>Built Machine Learning model with 88% accuracy to classify 50,000+ NYC crime records across all 5 boroughs. Created folium-based visualization with real-time heatmaps for 15+ crime types, cutting analysis time by 40%.</p>
-                    <a href="https://github.com/EvanFranco/NYC_Crime_Prediction_Model/tree/main/CSE3000" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/pokemon-guess.png" alt="Guess that Pokemon">
-                    <h3>Guess that Pokemon</h3>
-                    <p>A web-based game that challenges users to identify Pokemon from their picture, built using React and the PokeAPI. <p></p>
-                    <a href="https://github.com/EvanFranco/Guess-That-Pokemon" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/PacmanImageUnity.png" alt="Pacman Project">
-                    <h3>Pacman Reinforcement Learning</h3>
-                    <p>Recreated Pacman in Unity Game engine using C# scripts. Implemented Ghost AI with graph algorithms and modified Unity's ML model for reinforcement learning.</p>
-                    <a href="https://github.com/EvanFranco/PacmanProject" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/Me and Objects.png" alt="Object Classification System">
-                    <h3>Real-Time Object Classification System</h3>
-                    <p>A machine learning system that detects and classifies objects from live camera feed, providing real-time feedback with bounding boxes and confidence scores.</p>
-                    <a href="https://github.com/EvanFranco/ImageDetection" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/laundry-app.png" alt="UConn Laundry App">
-                    <h3>UConn Laundry App</h3> 
-                    <p>A mobile application helping UConn students track laundry machine availability in real-time. Built with React Native and Firebase.</p>
-                    <a href="https://github.com/LaundryConn" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/war-peace.png" alt="War and Peace Memorial WebApp">
-                    <h3>War and Peace Memorial WebApp</h3>
-                    <p>An interactive web application commemorating historical events, featuring an immersive timeline and detailed historical information.</p>
-                    <a href="https://ctmonumentprojectpols1402.github.io/CTMonument/" class="project-link">View Project</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/imdb-sorter.png" alt="IMDB Review Sorter">
-                    <h3>IMDB Review Sorter</h3>
-                    <p>A machine learning tool that analyzes and categorizes IMDB reviews, helping users quickly find relevant feedback about movies.</p>
-                    <a href="https://husky-developers.github.io/" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Valley Stream, New York / Storrs, Connecticut</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:evan.franco@uconn.edu">evan.franco@uconn.edu</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/evanfranco/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/EvanFranco" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="resume-buttons">
-                    <a href="assets/resume/Resume.pdf" class="resume-btn" target="_blank">
-                        <i class="fas fa-file-alt"></i>
-                        Download SWE/SDE Resume
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Evan Franco. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
